@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "works_areas",
+  "info": {
+    "singularName": "works-area",
+    "pluralName": "works-areas",
+    "displayName": "WorksArea"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "works": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work.work"
+    }
+  }
+}

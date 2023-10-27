@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_medias",
+  "info": {
+    "singularName": "work-media",
+    "pluralName": "work-medias",
+    "displayName": "WorkMedia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "image",
+        "video"
+      ],
+      "default": "image",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "work": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::work.work",
+      "inversedBy": "work_medias"
+    }
+  }
+}

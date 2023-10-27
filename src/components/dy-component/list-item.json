@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_dy_component_list_items",
+  "info": {
+    "displayName": "list-item",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "displayed_text": {
+      "type": "string"
+    }
+  }
+}
