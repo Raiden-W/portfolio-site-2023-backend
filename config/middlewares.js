@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = ({ env }) => [
   "strapi::errors",
   {
     name: "strapi::security",
@@ -12,14 +12,14 @@ module.exports = [
             "data:",
             "blob:",
             "market-assets.strapi.io",
-            "res.cloudinary.com",
+            `${env("AWS_BUCKET")}.s3.${env("AWS_REGION")}.amazonaws.com`,
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
             "market-assets.strapi.io",
-            "res.cloudinary.com",
+            `${env("AWS_BUCKET")}.s3.${env("AWS_REGION")}.amazonaws.com`,
           ],
           upgradeInsecureRequests: null,
         },
