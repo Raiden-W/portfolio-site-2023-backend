@@ -26,18 +26,19 @@ module.exports = ({ env }) => [
       },
     },
   },
-  {
-    name: "strapi::cors",
-    config: {
-      origin: [
-        env("EXTERNAL_URL", `http://localhost:${env("PORT", "1337")}`),
-        env("FRONT_END_ORIGIN", "http://localhost:5173"),
-      ],
-      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
-      keepHeaderOnError: true,
-    },
-  },
+  // {
+  //   name: "strapi::cors",
+  //   config: {
+  //     origin: [
+  //       env("EXTERNAL_URL", `http://localhost:${env("PORT", "1337")}`),
+  //       env("FRONT_END_ORIGIN", "http://localhost:5173"),
+  //     ],
+  //     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+  //     headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+  //     keepHeaderOnError: true,
+  //   },
+  // },
+  "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
