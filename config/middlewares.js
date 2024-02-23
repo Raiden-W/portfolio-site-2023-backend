@@ -34,6 +34,7 @@ module.exports = ({ env }) => [
         env("FRONT_END_ORIGIN", "http://localhost:5173"),
         "http://192.168.0.78:5173",
         "http://localhost:5173",
+        "http://43.135.112.27",
       ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],
